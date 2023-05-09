@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+    <title>Авторизация</title>
+</head>
+
+<body>
+
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form class="form" th:action="@{/login}" method="post">
+                <h2>Авторизация</h2>
+
+                <div class="inputbox">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <input type="text" name="username" pattern="\+7\d{10}" maxlength="12" required
+                           onblur="if (this.value) this.classList.add('active'); else this.classList.remove('active');">
+                    <label for="">Номер телефона (+7XXXXXXXXXX)</label>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="password" required>
+                    <label for="">Пароль</label>
+                </div>
+
+                <input type="submit" value="Войти" class="login" autocomplete="off">
+
+                <div class="register">
+                    <p>Нет аккаунта? <a href="/registration">Регистрация</a></p>
+                </div>
+
+                <p th:if="${param.error}" class="error">Неправильный логин или пароль</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+html {
+  --edit-h: 0px;
+  height: 100vh;
+  background: url("https://afitness.ru/assets/images/common/af-main.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main {
+  overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+header {
+  font-weight: 700;
+}
+header .nav a {
+  cursor: pointer;
+}
+
+section.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://afitness.ru/assets/images/common/af-main.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section.edit .form-box {
+  position: relative;
+  width: 400px;
+  height: var(--edit-h);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+section.edit h2 {
+  font-size: 2em;
+  color: #0c6dfd;
+  text-align: center;
+}
+section.edit .inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid #0c6dfd;
+}
+section.edit .inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #0c6dfd;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+section.edit input:focus ~ label,
+section.edit input:valid ~ label,
+section.edit .active ~ label {
+  top: -5px;
+}
+section.edit .active2 ~ label {
+  top: -10px;
+}
+section.edit .inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #000000;
+}
+section.edit .inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #000000;
+  font-size: 1.2em;
+  top: 20px;
+}
+section.edit .login {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #0c6dfd;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+section.edit .back {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #fd0c0c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+section.edit .register {
+  font-size: 0.9em;
+  color: #000;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+section.edit .register p a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+section.edit .register p a:hover {
+  text-decoration: underline;
+}
+section.edit .error {
+  text-align: center;
+  color: #F00;
+}
+section.edit select {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+.about-me {
+  overflow-y: scroll;
+  color: #fff;
+}
+.about-me h1 {
+  text-align: center;
+}
+.about-me img {
+  width: 330px;
+  height: 500px;
+  border-radius: 20px;
+}
+.about-me::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=base.css.map */

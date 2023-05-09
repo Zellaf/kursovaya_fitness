@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="ru">
+
+<div th:fragment="header" class="container">
+    <header class="d-flex justify-content-between py-3">
+      <div class = "d-flex gap-3">
+        <a sec:authorize="not hasAnyRole('ROLE_ADMIN','ROLE_USER')" href="/login" class="btn btn-outline-primary fw-bold">Войти</a>
+        <a sec:authorize="not hasAnyRole('ROLE_ADMIN','ROLE_USER')" href="/registration" class="btn btn-primary fw-bold">Регистрация</a>
+        <a sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER')" href="/logout" class="btn btn-outline-primary fw-bold">Выйти</a>
+      </div>
+
+      <ul class="d-flex gap-3 nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link">Об авторе</a></li>
+        <li class="nav-item"><a href="/coach" class="nav-link">Тренеры</a></li>
+        <li class="nav-item"><a href="/subscription" class="nav-link">Абонементы</a></li>
+        <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item"><a href="/user" class="nav-link">Пользователи</a></li>
+      </ul>
+    </header>
+</div>
+
+</html>
